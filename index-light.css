@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+@font-face{
+    font-family:'AnironReg' ;
+src: url(font/anirm___.ttf);
+}
+
+:root{
+    --couleur-principale: #4c8b83;
+    --couleur-secondaire: #c7b79e;
+    --couleur-tertiaire: #ad9673;
+    --couleur-quartiaire:#5da39a;
+}
+
+body{
+    margin: 0;
+    background: var(--couleur-secondaire);
+}
+
+*{
+    box-sizing: border-box;
+}
+.header{
+    background-image: url(img/rivendell.jpg);
+    background-position: center ;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+}
+.circle{
+    position: fixed;
+    background-image: url(img/ring-logo.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 100%;
+    height: 100%;
+    filter: opacity(0.4);
+    -webkit-animation:spin 60s linear infinite;
+    -moz-animation:spin 60s linear infinite;
+    animation:spin 60s linear infinite;
+}
+.circle-main{
+    position: fixed;
+    background-image: url(img/ring-logo.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 100%;
+    height: 100%;
+    filter: opacity(.1) ;
+    -webkit-animation:spin 60s linear infinite;
+    -moz-animation:spin 60s linear infinite;
+    animation:spin 60s linear infinite;
+    z-index: 1;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.title{
+    position: fixed;
+    top: 0%;
+    left: 27%;
+    width: 50%;
+    height: 100vh;
+    filter: drop-shadow(10px 10px 15px #000000) saturate(300%) ;
+    z-index: 5;
+}
+.title1{
+    display: none;
+}
+
+
+/* .bar {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    margin: 5px auto;
+    z-index: 1;
+    transition: background-color .5s ease-in, transform .5s ease-in, width .5s ease-in;
+  }
+  .top{
+    position: absolute;
+    top: 25px;
+  }
+  .bottom{
+    position: absolute;
+    top: 45px;
+  } */
+
+  /* .button-menu{
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    visibility: hidden;
+    top: 25px;
+    left: 32px;
+    width: 30px;
+    height: 30px;
+    z-index: 2;
+} */
+
+.mini-menu{
+    position: fixed;
+    z-index: 12;
+}
+.list{
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    border-right: 1px rgba(255, 255, 255, 0.219) solid;
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    top: 0;
+    transition: all .5s;
+    overflow: hidden;
+}
+.active{
+    opacity: .5;
+    pointer-events: none;   
+}
+
+.list p{
+    position: absolute;
+    top: -7px;
+    left: 70px;
+    width: 200px;
+}
+
+.list:hover{
+    width: 400px;
+}
+
+.list a{
+    margin-left: 35px;
+    margin-top: 10px;
+    scale: 1.5;
+    transition: all .5s;
+    color: black;
+    filter: invert();
+    text-decoration: none;
+    font-family: 'AnironReg';
+    font-variant-caps:small-caps;
+    font-weight: 400;
+    font-size: .7em;
+}
+li{
+    padding: 10px;
+}
+.icon-home{
+    position: absolute;
+    top: 5%;
+}
+.icon-movie{
+    position: absolute;
+    top: 17%;
+}
+.icon-game{
+    position: absolute;
+    top: 29%;
+}
+.icon-music{
+    position: absolute;
+    top: 41%;
+}
+.icon-ring{
+    position: absolute;
+    top: 53%;
+}
+
+.icon-hobbit{
+    position: absolute;
+    top: 67%;
+}
+.icon-about{
+    position: absolute;
+    top: 79%;
+}
+.icon-switch{
+    position: absolute;
+    top: 90%;
+    scale: .5;
+}
+.icon-switch p{
+    position: absolute;
+    font-size: .7em;
+    top: -7px;
+    left: 70px;
+    width: 200px;
+}
+.mini-menu a:hover{
+    scale: 1.6;
+}
+.scroll{
+    display: none;
+}
+.main{
+    font-family: 'AnironReg';
+    position: relative;
+    top: 120vh;
+    text-align: center;
+    width: 100%;
+    color: var(--couleur-principale);
+    z-index:2 ;
+}
+
+h1{
+    color: var(--couleur-principale);
+    margin: 0;
+    z-index: 2;
+    padding: 20px;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 200px 200px;
+    z-index: 15;
+}
+
+.disco{
+    color: var(--couleur-secondaire);
+    background-image: url(img/map-middle-earth-modified.jpg);
+    background-size: 102%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: var(--couleur-principale);
+    border-radius: 2px;
+    margin-right: 20px;
+    width: 400px;
+    height: 500px;
+    transition: all .5s;
+    overflow: hidden;
+}
+
+.disco ul{
+    justify-content: center;
+    background-color: var(--couleur-quartiaire);
+    height: 362px;
+    margin-top: 450px;
+    transition: margin-top .7s;
+}
+.disco li{
+    list-style: none;
+    color: var(--couleur-secondaire);
+    font-size: .9em;
+    position: relative;
+    left: -40px;
+    width: 115%;
+    padding: 12px 0;
+}
+.disco a{
+    text-decoration: none;
+}
+.disco li:hover{
+    color: var(--couleur-principale);
+    background-color: var(--couleur-secondaire);
+}
+.disco:hover ul{
+    margin: 0;
+}
+.disco:hover, .tolkien:hover{
+    scale: 1.05;
+}
+.tolkien{
+    color: var(--couleur-secondaire);
+    background-color: var(--couleur-principale);
+    border-radius: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 400px;
+    height: 500px;
+    transition: scale .5s;
+}
+.news{
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    width: 60vw;
+    border: 2px var(--couleur-tertiaire) solid;
+    border-radius: 2px;
+    text-align: center;
+}
+.article{
+    display: flex;
+    text-align: left;
+    margin: 20px 67px 30px 67px;
+    overflow: hidden;
+    
+}
+.contenu{
+    position: relative;
+    color: var(--couleur-secondaire);
+    background-color: var(--couleur-principale);
+    right: 0;
+    transition: right .5s;
+}
+.contenu h4{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 10%;
+    border-bottom: 5px var(--couleur-quartiaire) solid;
+}
+.contenu p{
+    width: 70%;
+    padding-left: 10%;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: justify;
+}
+
+.article-page{
+    padding: 20px;
+    cursor: pointer;
+}
+.article-page:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.more{
+    color: var(--couleur-secondaire);
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: -240px;
+    background-color: var(--couleur-quartiaire);
+    width: 240px;
+    height: 160px;
+    padding-top: 8%;
+    text-align: center;
+}
+.more:hover{
+    color: var(--couleur-principale);
+
+}
+.article:hover .contenu{
+    right: 240px;
+}
+
+
+
+@media screen and (max-width:1000px) {
+    .header{
+        background-image: url(img/baraddur-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 25% 75%  ;
+    }
+    .openbtn-div{
+        position: absolute;
+        top:0;
+        background-color: transparent;
+        backdrop-filter: blur(15px);
+        border: 1px rgba(255, 255, 255, 0.219) solid;
+        width: 100vw;
+        height: 5vh;
+    }
+    .openbtn {
+        position: absolute;
+        left: 45vw;
+        width: 5vh;
+        height: 5vh;
+        border: none;
+        cursor: pointer;
+        filter: invert();
+        background-color: transparent;
+        background-image: url(icon/menu-outline.svg);
+        background-position: center;
+        backdrop-filter: invert();
+        background-size: 100%;
+        background-repeat: no-repeat;
+        z-index: 2;
+        transition: all .45s;
+      }
+    .list{
+        margin-top: -150vh;
+        z-index: 1;
+    }
+    .list a{
+       margin-top: 0;
+    }
+    .list.mobile-menu{
+        margin-top: 0;
+        width: 100%;
+    }
+    
+    
+    .mobile-menu ~ .openbtn{
+        background-image: url(icon/close-outline.svg);
+        position: absolute;
+        top: 0;
+        left:85vw;
+        border: none;
+    }
+    .mobile-menu ~ .openbtn-div{
+        display: none;
+    }
+    .title{
+        display: none;
+    }
+    .circle,.circle-main{
+        display: none;
+    }
+    
+    .title1{
+        display: block;
+        position: relative;  
+        top: 20vh;
+        width: 100vw;
+        height: 100vh;
+        filter: drop-shadow(10px 10px 15px #000000) ;
+        transition: margin-left .5s;
+    }
+    .mobile-menu ~ .title1{
+        margin-left: 100%;
+    }
+    .scroll{
+        display: block;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        background-color: transparent;
+        width: 100vw;
+        height: 10vh;
+        text-align: center;
+        font-family: 'AnironReg';
+        animation: 1s ease-in-out 3s infinite alternate bounce;
+    }
+    @keyframes bounce {from{transform: translateY(0) ;} to{transform: translateY(-20px) ;}}  
+    .scroll h3{
+        position: absolute;
+        width: 100%;
+        top: -50%;
+        left: 0;
+    }
+    .scroll img{
+        position: absolute;
+        top: -550%;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        filter: invert();
+        scale: .1;
+    }
+    .main{
+        font-family: 'AnironReg';
+        position: relative;
+        top: 120vh;
+        width: 100%;
+        height: 2000px;
+        text-align: center;
+        color: var(--couleur-principale);
+        z-index:2 ;
+    }
+    
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 200px 200px;
+        z-index: 15;
+    }
+    
+    .disco{
+        color: var(--couleur-secondaire);
+        background-image: none;
+        border-radius: 2px;
+        margin:50px 100px;
+        width: 90vw;
+        height: 50vh;
+        font-size: 60%;
+        transition: all .5s;
+        overflow: hidden;
+    }
+    
+    .disco ul{
+        justify-content: center;
+        background-color: var(--couleur-quartiaire);
+        margin: 0;
+    }
+    
+    
+    .tolkien{
+        color: var(--couleur-secondaire);
+        border-radius: 2px;
+        margin:50px 100px;
+        width: 90vw;
+        height: 40vh;
+        font-size: 100%;
+        transition: all .5s;
+        overflow: hidden;
+    }
+    .article img{
+        display: none;
+    }
+    .news{
+        position: relative;
+        left: 0;
+        width: 90vw;
+    }
+    .article{
+        position: relative;
+        right: 15%;
+        width: 90%;
+    }
+    .article:hover .contenu{
+        right: 0;
+    }
+    .more{
+        display: none;
+    }
+}
